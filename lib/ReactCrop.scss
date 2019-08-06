@@ -14,8 +14,8 @@ $drag-handle-mobile-height: $drag-handle-height+10 !default;
 $drag-bar-mobile-size: $drag-bar-size+10 !default;
 
 // Handle color/border.
-$drag-handle-background-colour: rgba(255, 0, 0, 0.2) !default;
-$drag-handle-border: 1px solid rgba(0, 255, 0, 0.2) !default;
+$drag-handle-background-colour: rgba(255, 0, 0, 1) !default;
+$drag-handle-border: 1px solid rgba(0, 255, 0, 1) !default;
 
 .ReactCrop {
   position: relative;
