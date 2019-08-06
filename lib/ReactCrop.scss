@@ -9,13 +9,13 @@ $drag-bar-size: 6px !default;
 $mobile-media-query: '(pointer: coarse)' !default;
 
 // Mobile handle/bar sizes.  Override as above.
-$drag-handle-mobile-width: $drag-handle-width + 10 !default;
-$drag-handle-mobile-height: $drag-handle-height + 10 !default;
-$drag-bar-mobile-size: $drag-bar-size + 10 !default;
+$drag-handle-mobile-width: $drag-handle-width+10 !default;
+$drag-handle-mobile-height: $drag-handle-height+10 !default;
+$drag-bar-mobile-size: $drag-bar-size+10 !default;
 
 // Handle color/border.
-$drag-handle-background-colour: rgba(0, 0, 0, 0.2) !default;
-$drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
+$drag-handle-background-colour: rgba(255, 0, 0, 0.2) !default;
+$drag-handle-border: 1px solid rgba(0, 255, 0, 0.2) !default;
 
 .ReactCrop {
   position: relative;
@@ -83,6 +83,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
   }
 
   &__rule-of-thirds-vt {
+
     &::before,
     &::after {
       width: 1px;
@@ -101,6 +102,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
   }
 
   &__rule-of-thirds-hz {
+
     &::before,
     &::after {
       width: 100%;
@@ -138,6 +140,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-left: -(ceil($drag-handle-width / 2));
     cursor: nw-resize;
   }
+
   .ord-n {
     top: 0;
     left: 50%;
@@ -145,6 +148,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-left: -(ceil($drag-handle-width / 2));
     cursor: n-resize;
   }
+
   .ord-ne {
     top: 0;
     right: 0;
@@ -152,6 +156,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-right: -(ceil($drag-handle-width / 2));
     cursor: ne-resize;
   }
+
   .ord-e {
     top: 50%;
     right: 0;
@@ -159,6 +164,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-right: -(ceil($drag-handle-width / 2));
     cursor: e-resize;
   }
+
   .ord-se {
     bottom: 0;
     right: 0;
@@ -166,6 +172,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-right: -(ceil($drag-handle-width / 2));
     cursor: se-resize;
   }
+
   .ord-s {
     bottom: 0;
     left: 50%;
@@ -173,6 +180,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-left: -(ceil($drag-handle-width / 2));
     cursor: s-resize;
   }
+
   .ord-sw {
     bottom: 0;
     left: 0;
@@ -180,6 +188,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
     margin-left: -(ceil($drag-handle-width / 2));
     cursor: sw-resize;
   }
+
   .ord-w {
     top: 50%;
     left: 0;
@@ -204,6 +213,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
       height: $drag-bar-size;
       margin-top: -($drag-bar-size / 2);
     }
+
     &.ord-e {
       right: 0;
       top: 0;
@@ -211,6 +221,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
       height: 100%;
       margin-right: -($drag-bar-size / 2);
     }
+
     &.ord-s {
       bottom: 0;
       left: 0;
@@ -218,6 +229,7 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
       height: $drag-bar-size;
       margin-bottom: -($drag-bar-size / 2);
     }
+
     &.ord-w {
       top: 0;
       left: 0;
@@ -250,30 +262,37 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
       margin-top: -(ceil($drag-handle-mobile-height / 2));
       margin-left: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-n {
       margin-top: -(ceil($drag-handle-mobile-height / 2));
       margin-left: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-ne {
       margin-top: -(ceil($drag-handle-mobile-height / 2));
       margin-right: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-e {
       margin-top: -(ceil($drag-handle-mobile-height / 2));
       margin-right: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-se {
       margin-bottom: -(ceil($drag-handle-mobile-height / 2));
       margin-right: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-s {
       margin-bottom: -(ceil($drag-handle-mobile-height / 2));
       margin-left: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-sw {
       margin-bottom: -(ceil($drag-handle-mobile-height / 2));
       margin-left: -(ceil($drag-handle-mobile-width / 2));
     }
+
     .ord-w {
       margin-top: -(ceil($drag-handle-mobile-height / 2));
       margin-left: -(ceil($drag-handle-mobile-width / 2));
@@ -283,14 +302,17 @@ $drag-handle-border: 1px solid rgba(255, 255, 255, 0.7) !default;
       height: $drag-bar-mobile-size;
       margin-top: -($drag-bar-mobile-size / 2);
     }
+
     &__drag-bar.ord-e {
       width: $drag-bar-mobile-size;
       margin-right: -($drag-bar-mobile-size / 2);
     }
+
     &__drag-bar.ord-s {
       height: $drag-bar-mobile-size;
       margin-bottom: -($drag-bar-mobile-size / 2);
     }
+
     &__drag-bar.ord-w {
       width: $drag-bar-mobile-size;
       margin-left: -($drag-bar-mobile-size / 2);
